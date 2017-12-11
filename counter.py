@@ -68,6 +68,6 @@ def do_review():
 ip = socket.gethostbyname('pandaroyzazure.azurewebsites.net')
 run(
     app=app,
-    host=ip,
+    host='0.0.0.0',
     port=80
 )
