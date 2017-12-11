@@ -65,7 +65,7 @@ def do_review():
     xh.write(root)
     redirect('/review')
 
-ip = socket.gethostbyname('http://pandaroyzazure.azurewebsites.net')
+ip = socket.gethostbyname('pandaroyzazure.azurewebsites.net')
 run(
     app=app,
     host=ip,
