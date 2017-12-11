@@ -69,5 +69,5 @@ ip = socket.gethostbyname('pandaroyzazure.azurewebsites.net')
 run(
     app=app,
     host=ip,
-    port=8080
+    port=80
 )
