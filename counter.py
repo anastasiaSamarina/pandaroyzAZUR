@@ -3,6 +3,7 @@ from beaker.middleware import SessionMiddleware
 from time import time
 import xml_handler as xh
 from html_filter import filter_html
+import socket
 
 
 session_opts = {
@@ -14,6 +15,10 @@ session_opts = {
 
 app = SessionMiddleware(app(), session_opts)
 mlsecond_in_day = 86400000
+
+@route('/')
+def start():
+    return 'maumau'
 
 
 def get_current_time():
@@ -60,8 +65,9 @@ def do_review():
     xh.write(root)
     redirect('/review')
 
+ip = socket.gethostbyname('http://pandaroyzazure.azurewebsites.net')
 run(
     app=app,
-    host='0.0.0.0',
+    host=ip,
     port=5000
 )
