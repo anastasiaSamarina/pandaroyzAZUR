@@ -1,6 +1,8 @@
-from bottle import route, run, app, request, response
+from bottle import route, run, app, request, response, get, post, redirect, template
 from beaker.middleware import SessionMiddleware
 from time import time
+import xml_handler as xh
+from html_filter import filter_html
 
 
 session_opts = {
@@ -18,7 +20,7 @@ def get_current_time():
     return int(round(time() * 1000))
 
 
-@route('/')
+@route('/counter')
 def run_session():
     today = int(request.cookies.get('current_date', default='0'))
     if get_current_time() - today >= mlsecond_in_day:
@@ -42,9 +44,24 @@ def run_session():
         '''.format(v_all, v_today)
 
 
+@get('/review')
+def review():
+    info = xh.get_all_reviews()
+    info['title'] = 'Reviews'
+    return template('reviews.tpl', info)
+
+
+@post('/review')
+def do_review():
+    name = request.forms.get('name')
+    a_review = request.forms.get('review')
+    root = xh.get_root()
+    xh.add_review_to_root(root, name, filter_html(a_review))
+    xh.write(root)
+    redirect('/review')
+
 run(
     app=app,
-    host='localhost',
-    port=5000,
-    debug=True
+    host='0.0.0.0',
+    port=5000
 )
