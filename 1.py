@@ -1,1 +1,4 @@
-return 'mau'
+def main():
+	return 'mau'
+
+main()
