@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>MySite</title>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="galerycss.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body onkeydown="press(event)">
+	<nav class="navbar navbar-fixed-top" style="background-color: #AFE0CE;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Главная</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="aboutme.html">Обо мне</a>
+					</li>
+					<li>
+						<a href="galery.html">Галерея</a>
+					</li>
+				</ul>
+			</div>		
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row" id="search">
+			<div id="myModal" class="modal" role="dialog">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<p>Управление галереей: кнопки влево и вправо, закрыть - клавиша esc или нажмите на крестик. Чтобы закрыть помощь, нажмите esc. Если вы нажали "сделать картинку стартовой" или "сделать фоном", чтобы увидеть результат, обновите страницу, но знайте... ОБРАТНОГО ПУТИ НЕТ...</p>
+					</div>
+				</div>
+			</div>
+			<div id="wrap"></div>
+			<div class="unavailable col-lg-5 col-sm-6" id="img1">
+				<img class="big-img" src="1.jpg" alt="bimg1">
+			</div>
+			<div class="unavailable col-lg-5 col-sm-6" id="img2">
+				<img class="big-img" src="2.jpg" alt="bimg2">
+			</div>
+			<div class="unavailable col-lg-5 col-sm-6" id="img3">
+				<img class="big-img" src="3.jpg" alt="bimg3">
+			</div>
+			<div class="unavailable col-lg-5 col-sm-6" id="img4">
+				<img class="big-img" src="4.jpg" alt="bimg4">
+			</div>
+			<div class="unavailable col-lg-5 col-sm-6" id="img5">
+				<img class="big-img" src="5.jpg" alt="bimg5">
+			</div>
+			<div class="unavailable col-lg-5 col-sm-6" id="img6">
+				<img class="big-img" src="6.jpg" alt="bimg6">
+			</div>
+			<div class="col-lg-5 col-sm-6" id="buttons">
+				<button class="btn" type="button" id="close">
+					<img src="close.png" alt="close-picture" id="close-picture">
+				</button>
+				<div class="change">
+					<button class="photo-btn btn btn-default" type="button" id="start_picture">Сделать картинку стартовой</button>
+					<button class="photo-btn btn btn-default" type="button" id="background_picture">Сделать картинку фоном</button>
+				</div>
+			</div>
+			<div class="photo-section">
+				<div class="container photos">
+					<ul class="list_inline">
+						<li>
+							<img class="qwer img-thumbnail" src="1.jpg" alt="image1" id="1">
+						</li>
+						<li>
+							<img class="qwer img-thumbnail" src="2.jpg" alt="image2" id="2">
+						</li>
+						<li>
+							<img class="qwer img-thumbnail" src="3.jpg" alt="image3" id="3">
+						</li>
+						<li>
+							<img class="qwer img-thumbnail" src="4.jpg" alt="image4" id="4">
+						</li>
+						<li>
+							<img class="qwer img-thumbnail" src="5.jpg" alt="image5" id="5">
+						</li>
+						<li>
+							<img class="qwer img-thumbnail" src="6.jpg" alt="image6" id="6">
+						</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="galery.js"></script>
+</body>
+</html>

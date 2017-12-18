@@ -1,0 +1,108 @@
+.navbar {
+	background-color: #AFE0CE;
+}
+
+.modal-content {
+	padding: 15px;
+}
+
+body {
+	background: url(img1.jpg);
+	color: #4D243D;
+	font-family: 'Vollkorn', serif;
+	font-weight: 700;
+}
+
+h2 {
+	color: #4D243D;
+	font-family: 'Vollkorn', serif;
+	font-weight: 700;
+}
+
+ul {
+	list-style: none;
+}
+
+.nav li, .list_inline li {
+	font-size: 18px;
+	color: #4D243D;
+}
+
+.photo-section{
+	margin-top: 8em;
+	margin-bottom: 8em;
+	text-align: center;
+}
+
+.list_inline { 
+	margin-right: 2em; 
+}
+
+.list_inline li {
+	display: inline-block;
+}
+
+#myModal {
+	color: black;
+	font-family: 'Vollkorn', serif;
+	font-size: 2em;
+	display: none;
+	top: 100px;
+	overflow:  hidden;
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6, #buttons {
+	left: 0;
+	bottom:0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	position: fixed;
+	display: none;
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6 { 
+	width: 35%; 
+	min-width: 350px;
+	top: 10%;
+}
+
+#buttons { 
+	width: 40%; 
+	min-width: 300px;
+	top: 70%;
+	padding-top: 12px;
+}
+
+.photo-btn {
+	font-size: 4%;
+}
+
+#wrap{
+	display: none;
+	opacity: 0.8;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(1, 1, 1, 0.725);
+}
+
+.big-img {
+	background: url(loading.jpg) 50% no-repeat white;
+	width: 90%;
+}
+
+.qwer { 
+	width: 300px;
+}
+
+#close {
+	background: none;
+	border: 0;
+}
+
+#close-picture { 
+	width: 30%;
+}

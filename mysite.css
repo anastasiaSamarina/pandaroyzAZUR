@@ -1,0 +1,46 @@
+.navbar {
+	background-color: #AFE0CE;
+}
+
+body {
+	background: url(img1.jpg);
+	color: #4D243D;
+	font-family: 'Vollkorn', serif;
+	font-weight: 700;
+}
+
+h1 {
+	color: #4D243D;
+	font-family: 'Vollkorn', serif;
+	font-weight: 700;
+}
+
+ul {
+	list-style: none;
+}
+
+.nav li, .list_inline li {
+	font-size: 18px;
+	color: #4D243D;
+}
+
+.list_inline {
+	margin-right: 3em;
+}
+
+.list_inline li {
+	display: inline-block;
+}
+
+.intro-header {
+	text-align: center;
+}
+
+img {
+	width: 350px;
+	margin-top: 100px;
+}
+
+.btn {
+	background-color: #AE8CA3;
+}
